@@ -1,0 +1,142 @@
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 88vh;
+    color: aliceblue;
+    user-select: none;
+
+    background-image:
+        linear-gradient(to right, #1e00e1 0%, #1e00e1 25%, #fe0000 50%, #e4680a 75%, #e4680a 100%),
+        url(../res/background.webp);
+
+    background-position: left bottom, center center;
+    background-size: 100% 0.5vh, cover;
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: scroll;
+}
+
+
+.title img {
+    height: 30vh;
+    width: auto;
+}
+
+.title h1 {
+    font-size: 8vw;
+    font-weight: 400;
+    margin: 0;
+}
+
+.title h2 {
+    font-size: 3vw;
+    font-weight: lighter;
+    margin: 0;
+}
+
+/* Letter Container */
+.letter {
+    margin: 2vw 2vw;
+    width: 96%;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+/* Tab Controller Header */
+.letter-tabs {
+    display: flex;
+    background: #f5f5f7;
+    border-bottom: 1px solid #e5e5ea;
+}
+
+.letter-tab-label {
+    flex: 1;
+    padding: 14px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    color: #86868b;
+    transition: all 0.2s ease;
+}
+
+.letter-tab-label:hover {
+    color: #1d1d1f;
+    background: #ededf0;
+}
+
+/* Hide the native radio buttons completely */
+.letter-tab-radio {
+    display: none;
+}
+
+/* Content Wrapper using CSS Grid to lock the height */
+.letter-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+}
+
+/* Stack all paragraphs in the same grid cell */
+.letter-tab-content {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333333;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+
+    font-size: 15px;
+    line-height: 1.6;
+    color: #222222;
+}
+
+/* Visually distinguish the person who wrote it */
+.letter-author {
+    margin-top: 25px;
+    font-family: sans-serif; /* Changes font style from the serif body */
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* --- Functional State Rules --- */
+
+/* 1. Active Tab styling */
+#letter1:checked ~ .letter-tabs .letter-tab-label[for="letter1"],
+#letter2:checked ~ .letter-tabs .letter-tab-label[for="letter2"],
+#letter3:checked ~ .letter-tabs .letter-tab-label[for="letter3"] {
+    /* color: #0071e3; */
+    background: #ffffff;
+}
+
+#letter1:checked ~ .letter-tabs .letter-tab-label[for="letter1"] {
+    color: #1e00e1;
+    border-bottom: 2px solid #1e00e1;
+}
+#letter2:checked ~ .letter-tabs .letter-tab-label[for="letter2"] {
+    color: #fe0000;
+    border-bottom: 2px solid #fe0000;
+}
+#letter3:checked ~ .letter-tabs .letter-tab-label[for="letter3"] {
+    color: #e4680a;
+    border-bottom: 2px solid #e4680a;
+}
+
+
+/* 2. Toggle content visibility based on chosen radio button */
+#letter1:checked ~ .letter-container .content1,
+#letter2:checked ~ .letter-container .content2,
+#letter3:checked ~ .letter-container .content3 {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}

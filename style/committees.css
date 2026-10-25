@@ -1,0 +1,93 @@
+/* The Grid Container */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3vh;
+    width: 90%;
+    margin: 3vh auto;
+
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+/* The Grid Items (Wrappers) */
+.grid-item {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+
+    container-type: inline-size;
+}
+
+/* The Images */
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Zoom Effect (Only if description is NOT open) */
+.grid-item:not(.active):hover img {
+    transform: scale(1.01);
+}
+
+/* Description Box Overlay */
+.description-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75); /* Semi-transparent dark background */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    opacity: 0;                            /* Hidden by default */
+    transition: opacity 0.3s ease;
+    pointer-events: none;                  /* Lets you click through it when hidden */
+}
+
+/* Active State (When an item is clicked) */
+.grid-item.active .description-box {
+    opacity: 1;                            /* Fades in the box */
+    pointer-events: auto;                  /* Makes text/buttons inside interactive */
+}
+
+/* Blur the image when its grid-item is active */
+.grid-item.active img {
+    filter: blur(5px); /* Adjust the pixels to make it more or less blurry */
+}
+
+/* 2. Update the Text Typographies */
+.description-box h3 {
+    margin: 0 0 8px 0;
+    /* Min size: 16px, Scaled size: 8% of box width, Max size: 24px */
+    font-size: clamp(10px, 4cqi, 30px);
+    font-weight: 700;
+}
+
+.description-box p {
+    margin: 0;
+    /* Min size: 12px, Scaled size: 5% of box width, Max size: 16px */
+    font-size: clamp(8px, 4cqi, 24px);
+    line-height: 1.4;
+    color: #e0e0e0;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+    .image-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+}
+@media (max-width: 480px) {
+    .image-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,23 @@
+.application-text {
+    display: flex;
+    justify-self: center;
+    align-items: center; /* Vertically centers the text block inside the border */
+    border: 2px solid gray;
+    border-radius: 16px;
+    justify-content: center;
+    margin: 3vh 3vh;
+    padding: 2vh 2vh;
+    font-size: 3.5vh;
+    width: fit-content;
+    user-select: none;
+}
+
+.application-text a {
+    display: inline;
+    font-weight: bold;
+}
+
+.application-text a:hover {
+    transition: color 0.4s ease-in-out;
+    color: rgb(66, 133, 244);
+}

@@ -3,89 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TAKEVMUN</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            padding: 20px;
-        }
-
-        .container {
-            text-align: center;
-            max-width: 600px;
-            background: #ffffff;
-            padding: 40px 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        .icon {
-            font-size: 64px;
-            margin-bottom: 20px;
-            display: inline-block;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            color: #111;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        p {
-            font-size: 1.1rem;
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-
-        .footer {
-            font-size: 0.9rem;
-            color: #999;
-        }
-
-        .contact-link {
-            color: #2563eb;
-            text-decoration: none;
-        }
-
-        .contact-link:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>TAKEVMUN - Ana Sayfa</title>
+    <link rel="icon" type="image/x-icon" href="res/logo.webp">
+    <link rel="stylesheet" href="style/global.css">
+    <link rel="stylesheet" href="style/navbar.css">
+    <link rel="stylesheet" href="style/popup.css">
+    <link rel="stylesheet" href="style/main-page.css">
 </head>
-<body>
+<body data-theme="blue">
+    <div class="navbar">
+        <div class="logo"><a href="index.html"><img src="res/logo.webp"></a></div>
 
-    <div class="container">
-        <!-- Visual anchor emoji representing construction -->
-        <div class="icon">🚧</div>
-        
-        <h1>Yapım Aşamasında</h1>
-        
-        <p>Şu anda sıkı bir çalışma içerisindeyiz. Baştan sona yenilenmiş internet sayfamız çok yakında sizlerle olacak!</p>
-        
-        <div class="footer">
-            <p>Daha fazla bilgi için: <a class="contact-link">ismailyigitozmen@gmail.com</a></p>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="tabs" id="nav-tabs">
+            <a href="committees.html">Komiteler</a>
+            <a href="applications.html">Başvurular</a>
+            <a href="team.html">Ekibimiz</a>
+            <a href="guides.html">Çalışma Rehberleri</a>
+        </div>
+
+        <div class="lang-selection"></div>
+    </div>
+
+    <div class="title">
+        <img src="res/logo-white.webp">
+        <h1>TAKEV<b>MUN</b>'27</h1>
+        <h2>English&emsp;&emsp;•&emsp;&emsp;Türkçe&emsp;&emsp;•&emsp;&emsp;Deutsch<br><br></h2>
+    </div>
+
+    <div class="letter">
+        <!-- Radio Inputs (Hidden CSS Controllers) -->
+        <input type="radio" id="letter1" name="letter" class="letter-tab-radio" checked>
+        <input type="radio" id="letter2" name="letter" class="letter-tab-radio">
+        <input type="radio" id="letter3" name="letter" class="letter-tab-radio">
+
+        <!-- Navigation Headers -->
+        <div class="letter-tabs">
+            <label for="letter1" class="letter-tab-label">English</label>
+            <label for="letter2" class="letter-tab-label">Türkçe</label>
+            <label for="letter3" class="letter-tab-label">Deutsch</label>
+        </div>
+
+        <!-- Panels Wrapper -->
+        <div class="letter-container">
+            <div class="letter-tab-content content1">
+                <p class="letter-text">
+                    Dear Delegates, Faculty Advisors, and Esteemed Members of the Organization Teams,
+                </p>
+                <p class="letter-text">
+                    It is with great pleasure and immense excitement that I extend a warm welcome to each of you for the 1st Official Session of TAKEVMUN.
+                </p>
+                <p class="letter-text">
+                    As per my position of Secretary-General, I am incredibly proud to see the efforts of all our teams over the past few months come to fruition. I am confident that this conference will provide an inspiring platform for addressing global issues through diplomacy, communication, and mutual understanding.
+                </p>
+                <p class="letter-text">
+                    In times where citizens’ daily lives are increasingly shaped by politics and international relations, we need capable, empathetic and virtuous diplomats now more than ever. This conference will not only be an opportunity to address international challenges, but one meant to nurture future leaders.
+                </p>
+                <p class="letter-text">
+                    I would also like to express my deepest gratitude to our faculty advisors, our hardworking members, and everyone behind the scenes whose unyielding commitment has brought this event to life. Events of this scale are powered by passion, and we are grateful for your support.
+                </p>
+                <p class="letter-text">
+                    To all the delegates: seize this moment. Challenge your own assumptions, hone your leadership and communication skills, and build connections that will last long after the closing ceremony.
+                </p>
+                <p class="letter-text">
+                    Let this first session be a journey defined by inspiration, intellectual curiosity, and shared ambition. Together, let us work toward a vision of progress and understanding, leaving a legacy for future generations to build upon.
+                </p>
+                <p class="letter-text">
+                    Best wishes,
+                </p>
+                <div class="letter-author">
+                    — Deniz Ezgi Ebil, Secretary-General
+                </div>
+            </div>
+            <div class="letter-tab-content content2">
+                <p class="letter-text">
+                    Değerli Delegeler, Saygıdeğer Danışman Öğretmenler ve Sevgili Ekip Arkadaşlarım,
+                </p>
+                <p class="letter-text">
+                    Hepinizi konferansımızda görmekten büyük mutluluk duyuyorum. Aylardır üzerinde çalıştığımız bu organizasyonun sonunda sizlerle buluşacak olması, benim ve tüm ekibimiz için oldukça heyecan verici.
+                </p>
+                <p class="letter-text">
+                    Hazırlık sürecinde akademik ve organizasyon ekiplerimizle pek çok ayrıntı üzerine düşündük, zaman zaman zorlandık ve birlikte çözüm bulduk. Şimdi ise bütün bu emeğin, sizlerin katılımıyla anlam kazanacağı günlere geldik. Dileğim, buradan hem yeni şeyler öğrenmiş hem de güzel anılar biriktirmiş olarak ayrılmanız.
+                </p>
+                <p class="letter-text">
+                    Konferans boyunca dünyanın farklı bölgelerini ilgilendiren sorunları tartışacak, temsil ettiğiniz ülkelerin görüşlerini savunacak ve ortak kararlar almaya çalışacaksınız. Bazen bir öneriye katılmayacak, bazen de başka bir delegenin söyledikleri üzerine kendi düşüncenizi yeniden değerlendireceksiniz. Bence bu deneyimi değerli kılan da tam olarak bu: birbirimizi dinlemek ve farklı düşündüğümüz insanlarla birlikte bir sonuca ulaşabilmek.
+                </p>
+                <p class="letter-text">
+                    Özellikle ilk kez bir MUN konferansına katılan delegelerimize söylemek isterim ki heyecanlanmanız, söz alırken çekinmeniz ya da hata yapmanız çok doğal. Kendinize zaman tanıyın ama fikirlerinizi paylaşmaktan da vazgeçmeyin. Söylediğiniz bir cümle, komitenizde yeni bir tartışmanın başlamasını sağlayabilir. Daha deneyimli delegelerimizin de bilgi ve tecrübeleriyle bu sürece katkıda bulunacağına inanıyorum.
+                </p>
+                <p class="letter-text">
+                    Yoğun tartışmaların ve oturumların arasında birbirinizi tanımaya da vakit ayırmanızı umuyorum. Konferans bittiğinde hatırlayacağınız şeyler arasında başarılı bir konuşmanın yanında, bir teneffüste başlayan sohbetin ya da birlikte güldüğünüz bir anın da yer almasını isterim.
+                </p>
+                <p class="letter-text">
+                    Bu süreçte emeğini ve desteğini esirgemeyen danışman öğretmenlerimize, akademik ve organizasyon ekiplerimize içtenlikle teşekkür ederim. Hazırlıkların her aşamasında sorumluluk alan ekip arkadaşlarımla birlikte çalışmış olmaktan mutluluk duyuyorum.
+                </p>
+                <p class="letter-text">
+                    Hepinize kendinizi rahatça ifade edebileceğiniz, yeni dostluklar kurabileceğiniz ve katılmış olmaktan memnuniyet duyacağınız bir konferans diliyorum. Sizi 23-24-25 Ocak tarihindeki konferansımıza bekliyorum.
+                </p>
+                <p class="letter-text">
+                    Sevgilerim ve saygılarımla,
+                </p>
+                <div class="letter-author">
+                    — Adnan Ata Önvural, Genel Sekreter
+                </div>
+            </div>
+            <div class="letter-tab-content content3">
+                <p class="letter-text">
+                    Sehr geschätzte MUN-Beraterinnen und -Berater, liebe Delegierte und Mitglieder unseres Organisationsteams,
+                </p>
+                <p class="letter-text">
+                    es ist mir eine große Freude und Ehre, Sie alle zur diesjährigen TAKEVMUN-Konferenz herzlich willkommen zu heißen. Am 23., 24. und 25. Januar schlagen wir gemeinsam ein neues Kapitel in unserer Konferenz auf. Die monatelangen, intensiven Vorbereitungen unseres akademischen Teams und des Organisationsteams haben die Grundlage für drei Tage geschaffen, die von anspruchsvollen Debatten, inspirierenden Begegnungen und dem gemeinsamen Ringen um zukunftsweisende Lösungen geprägt sein werden.
+                </p>
+                <p class="letter-text">
+                    Model United Nations ist weit mehr als eine diplomatische Simulation. Es bietet eine Plattform, auf der globale Herausforderungen kritisch hinterfragt, unterschiedliche Perspektiven eingenommen und Brücken zwischen verschiedenen Positionen geschlagen werden können. Gerade in einer Zeit tiefgreifender globaler Veränderungen braucht unsere Welt diplomatische Weitsicht, gegenseitigen Respekt und den Mut, innovative Kompromisse zu finden. In den deutschsprachigen Ausschüssen unserer Konferenz werden Sie diese Werte mit Leben füllen: durch präzise Analysen, rhetorisches Geschick und konstruktive Zusammenarbeit.
+                </p>
+                <p class="letter-text">
+                    An unsere Delegierten: Nutzen Sie diese Gelegenheit, um über sich hinauszuwachsen. Bringen Sie Ihre Ideen mit Leidenschaft ein, vertreten Sie Ihre Positionen mit Überzeugung und bleiben Sie dabei stets offen für die Argumente anderer. Neben den intensiven Debatten bietet Ihnen diese Konferenz die Möglichkeit, neue Kontakte zu knüpfen, wertvolle Freundschaften zu schließen und Fähigkeiten weiterzuentwickeln, die Sie auf Ihrem Weg zu verantwortungsbewussten globalen Akteurinnen und Akteuren stärken werden.                </p>
+                <p class="letter-text">
+                    Ein besonderer Dank gilt unseren Akademischen Berater und Beraterinnen sowie dem gesamten Organisationsteam, das im Hintergrund mit großem Engagement arbeitet. Ihr unermüdlicher Einsatz und ihre große Hingabe hat diese Konferenz erst möglich gemacht.
+                </p>
+                <p class="letter-text">
+                    Ich wünsche Ihnen allen drei erkenntnisreiche, inspirierende und erfolgreiche Tage bei TAKEVMUN. Lassen Sie uns diese Gelegenheit nutzen, um gemeinsam für  eine friedlichere und gerechtere Zukunft nachzudenken, unterschiedliche Standpunkte in einen konstruktiven Dialog zu bringen und konkrete Lösungsansätze zu erarbeiten.
+                </p>
+                <p class="letter-text">
+                    Denn Diplomatie beginnt dort, wo wir bereit sind, einander zuzuhören, unterschiedliche Perspektiven zu verstehen und trotz aller Unterschiede gemeinsam nach Lösungen zu suchen.
+                </p>
+                <p class="letter-text">
+                    Vielen Dank und eine erfolgreiche TAKEVMUN-Konferenz!
+                </p>
+                <div class="letter-author">
+                    — Ege Düzcü, Generalsekretär
+                </div>
+            </div>
         </div>
     </div>
 
+    <div id="instagram-popup" class="popup-overlay" style="display: none;">
+        <div class="popup-content">
+            <button class="popup-close" id="close-popup">&times;</button>
+            <h2>Instagram hesabımızı takip edin!</h2>
+            <p>Güncellemeleri kaçırmamak için bizi Instagram'da <b>@takevmunofficial</b> kullanıcı adıyla takip edebilirsiniz.</p>
+            <a href="https://www.instagram.com/takevmunofficial/" target="_blank" class="popup-btn">Takip Et</a>
+        </div>
+    </div>
+
+    <script src="script/global.js"></script>
 </body>
 </html>

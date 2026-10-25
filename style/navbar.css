@@ -1,0 +1,125 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 2vh;
+    background-color: aliceblue;
+    color: black;
+    width: auto;
+    height: auto;
+    user-select: none;
+    white-space: nowrap;
+    position: relative;
+
+    border-bottom: 0.5vh solid transparent;
+    border-image: linear-gradient(to right, #1e00e1 0%, #1e00e1 25%, #fe0000 50%, #e4680a 75%, #e4680a 100%) 1;
+    z-index: 500;
+}
+
+.logo {
+    flex: 1;
+}
+
+.logo a {
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.logo img {
+    height: 10vh;
+    width: auto;
+}
+
+.tabs {
+    display: flex;
+    font-size: 3.5vh;
+    gap: 0px 2vw;
+}
+
+.lang-selection {
+    flex: 1;
+    text-align: end;
+}
+
+/* Hamburger Icon Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger Animation when Active */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile Responsiveness & Smooth Animation */
+@media screen and (max-width: 900px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .tabs {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: aliceblue;
+        align-items: center;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+        border-top: 1px solid #d0e1f9;
+
+        /* Smooth transition properties */
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        pointer-events: none;
+        transition: max-height 0.50s ease-in-out, opacity 0.45s ease-in-out, padding 0.45s ease-in-out;
+        padding: 0 2vh;
+    }
+
+    .tabs.active {
+        max-height: 600px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .tabs a {
+        width: 100%;
+        text-align: center;
+        padding: 1.5vh 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .tabs a:last-child {
+        border-bottom: none;
+    }
+
+    .lang-selection {
+        flex: 0;
+    }
+}

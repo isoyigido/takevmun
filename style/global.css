@@ -1,0 +1,32 @@
+*, *::before, *::after {
+    transition: background-color 1.0s ease, color 1.0s ease, text-shadow 1.0s ease, border-color 1.0s ease, box-shadow 1.0s ease;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background-color: aliceblue;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+img, a {
+    -webkit-user-drag: none;
+}
+
+a {
+    -webkit-user-drag: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+.temporary-text {
+    display: flex;
+    justify-content: center;
+    margin: 5vh 5vh;
+    font-size: 3.5vh;
+}
