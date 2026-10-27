@@ -1,5 +1,4 @@
 *, *::before, *::after {
-    transition: background-color 1.0s ease, color 1.0s ease, text-shadow 1.0s ease, border-color 1.0s ease, box-shadow 1.0s ease;
     box-sizing: border-box;
 }
 
