@@ -3,7 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 88vh;
+    width: 100%;
+    height: 88svh;
     color: aliceblue;
     user-select: none;
 
@@ -12,32 +13,32 @@
         url(../res/background.webp);
 
     background-position: left bottom, center center;
-    background-size: 100% 0.5vh, cover;
+    background-size: 100% 1vh, cover;
     background-repeat: no-repeat, no-repeat;
     background-attachment: scroll;
 }
 
 
 .title img {
-    height: 30vh;
+    height: 30svh;
     width: auto;
 }
 
 .title h1 {
-    font-size: 8vw;
+    font-size: 9svw;
     font-weight: 400;
     margin: 0;
 }
 
 .title h2 {
-    font-size: 3vw;
+    font-size: 3svw;
     font-weight: lighter;
     margin: 0;
 }
 
 /* Letter Container */
 .letter {
-    margin: 2vw 2vw;
+    margin: 2svw 2svw;
     width: 96%;
     background: #ffffff;
     border-radius: 12px;
@@ -139,4 +140,29 @@
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .title h1 {
+        font-size: 11svw;
+    }
+
+    .title h2 {
+        font-size: 4svw;
+    }
+}
+
+/* English */
+.content1 .letter-text {
+  font-size: 15.25px;
+}
+
+/* Turkish */
+.content2 .letter-text {
+  font-size: 13px;
+}
+
+/* German */
+.content3 .letter-text {
+  font-size: 12px;
 }
