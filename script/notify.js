@@ -1,6 +1,13 @@
 // Central Notification Data Source (Use real ISO timestamps or Date objects)
 const NOTIFICATIONS_DATA = [
     {
+        id: "3",
+        title: "Başvurularımız açıldı!",
+        message: "Konferansta istediğiniz komitede yer edinebilmek için bir an önce başvurmayı unutmayın.",
+        link: "applications.html",
+        date: "2026-11-14T20:40:00"
+    },
+    {
         id: "2",
         title: "Ekip fotoğrafları paylaşıldı!",
         message: "Sizlere harika bir konferans deneyimi sağlamak için sıkı çalışan ekibimizle tanışın.",
