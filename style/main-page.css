@@ -144,11 +144,13 @@
 
 @media screen and (max-width: 1200px) {
     .title h1 {
+        margin: 1vh 0;
         font-size: 11svw;
     }
 
     .title h2 {
-        font-size: 4svw;
+        font-size: 6svw;
+        margin: 1vh 0;
     }
 }
 
