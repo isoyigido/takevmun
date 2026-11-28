@@ -44,7 +44,6 @@
     position: relative;
 }
 
-/* Bell Button */
 .notification-btn {
     background: none;
     border: none;
@@ -57,16 +56,16 @@
     outline: none;
 }
 
-.bell-icon {
-    width: 2.8vh;
-    height: 2.8vh;
+.megaphone-icon {
+    width: 4vh;
+    height: 4vh;
     min-width: 22px;
     min-height: 22px;
     color: #333;
     transition: transform 0.2s ease;
 }
 
-.notification-btn:hover .bell-icon {
+.notification-btn:hover .megaphone-icon {
     transform: scale(1.1);
 }
 
